@@ -1140,22 +1140,25 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
 		#bg:after {
-			-moz-transform: scale(1.125);
-			-webkit-transform: scale(1.125);
-			-ms-transform: scale(1.125);
-			transform: scale(1.125);
+			-moz-transform: scale(1);
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
 			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/Generic\ Background.png"); /*Modify the "images/bg.jpg" section of this line ONLY.*/ 
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1287,17 +1290,25 @@ input, select, textarea {
 				display: none;
 			}
 
+		/* Header Logo */
 		#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
-			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+			overflow: hidden; /* Ensures the logo remains circular */
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
-			#header .logo .icon:before {
-				font-size: 2rem;
-			}
+		#header .logo img.custom-logo {
+			width: 100%;
+			height: 100%;
+			object-fit: cover; /* Ensures the image scales properly within the circle */
+			border-radius: 50%; /* Ensures the image itself is circular */
+		}	
+
 
 		#header .content {
 			border-style: solid;
@@ -1332,62 +1343,57 @@ input, select, textarea {
 				line-height: 2;
 			}
 
-		#header nav ul {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			margin-bottom: 0;
-			list-style: none;
-			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
-		}
-
-			#header nav ul li {
+			#header nav ul {
+				display: flex; /* Flexbox for alignment */
+				margin-bottom: 0;
+				list-style: none;
 				padding-left: 0;
-				border-left: solid 1px #ffffff;
+				border: solid 1px #ffffff;
+				border-radius: 4px;
+				width: 100%;
+				box-sizing: border-box;
+				justify-content: space-evenly; /* Evenly space the buttons */
 			}
-
-				#header nav ul li:first-child {
-					border-left: 0;
-				}
-
-				#header nav ul li a {
-					display: block;
-					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
-					border-bottom: 0;
-				}
-
-					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
-					}
-
-					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
-					}
-
-		#header nav.use-middle:after {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: calc(50% - 1px);
-			width: 1px;
-			height: 100%;
-			background: #ffffff;
-		}
-
-		#header nav.use-middle ul li.is-middle {
-			border-left: 0;
-		}
-
+			
+			#header nav ul li {
+				display: flex; /* Flex for the list items */
+				justify-content: center; /* Center the text horizontally */
+				align-items: center; /* Vertically align the text */
+				padding: 0; /* Remove default padding */
+			}
+			
+			#header nav ul li:first-child {
+				border-left: 0; /* Remove left border for the first item */
+			}
+			
+			#header nav ul li a {
+				display: flex;               /* Use flexbox to center text inside links */
+				justify-content: center;     /* Horizontally center the text */
+				align-items: center;         /* Vertically center the text */
+				height: 2.75rem;             /* Set height to match button */
+				line-height: 2.75rem;        /* Match line height for vertical centering */
+				padding: 0 1.25rem;          /* Symmetrical padding on the left and right */
+				text-transform: uppercase;   /* Uppercase for consistency */
+				letter-spacing: 0.2rem;      /* Letter spacing as per design */
+				font-size: 0.8rem;           /* Font size remains the same */
+				border-bottom: 0;            /* No bottom border */
+				width: auto;                 /* Allow width to adjust based on content */
+				box-sizing: border-box;      /* Ensure padding and borders are included in width */
+				white-space: nowrap;         /* Prevent text from wrapping onto multiple lines */
+				transition: background-color 0.3s ease; /* Smooth transition for background color */
+			}
+			
+			#header nav ul li a:hover {
+				background-color: rgba(255, 255, 255, 0.175); /* Hover background color */
+				border-radius: 4px; /* Optional: Keep border-radius consistent during hover */
+			}
+			
+			#header nav ul li a:active {
+				background-color: rgba(255, 255, 255, 0.175); /* Active effect */
+			}
+			
+			
+			
 		body.is-article-visible #header {
 			-moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
@@ -1656,3 +1662,71 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		/* Remove margin/padding from the article or iframe if needed */
+#askform {
+    margin-bottom: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the iframe to the top */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Ensure iframe doesn't add extra space at the bottom */
+iframe {
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+
+/* Ask Form Navigation */
+.ask-nav {
+    list-style-type: none;  /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Flexbox to match nav bar alignment */
+    justify-content: center;  /* Center the link */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ask-nav li {
+    display: flex;  /* Flex for the list items */
+    justify-content: center;  /* Center the text horizontally */
+    align-items: center;  /* Vertically align the text */
+    padding: 0;
+}
+
+.ask-nav li a {
+    display: flex;               /* Use flexbox to center text inside links */
+    justify-content: center;     /* Horizontally center the text */
+    align-items: center;         /* Vertically center the text */
+    height: 2.75rem;             /* Set height to match button */
+    line-height: 2.75rem;        /* Match line height for vertical centering */
+    padding: 0 1.25rem;          /* Symmetrical padding on the left and right */
+    text-transform: uppercase;   /* Uppercase for consistency */
+    letter-spacing: 0.2rem;      /* Letter spacing as per design */
+    font-size: 0.8rem;           /* Font size remains the same */
+    color: #fff;                 /* Text color white */
+    border: 1px solid #fff;      /* Border color matches the text color */
+    border-radius: 12px;         /* Rounded corners */
+    width: auto;                 /* Allow width to adjust based on content */
+    box-sizing: border-box;      /* Ensure padding and borders are included in width */
+    white-space: nowrap;         /* Prevent text from wrapping onto multiple lines */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+	margin-bottom: 30px;
+}
+
+.ask-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.175); /* Hover background color */
+    border-radius: 12px; /* Keep rounded corners on hover */
+}
+
+.ask-nav li a:active {
+    background-color: rgba(255, 255, 255, 0.175); /* Active effect */
+}
+
