@@ -10,7 +10,7 @@ This lil guide here is gonna walk you through everything you need to get your zi
 ## Table of Contents
 1. [Getting Started](#getting-started)
    - [Fork the Repo](#1-fork-the-repo)
-2. [Customizing Time](#2-customizing-time)
+2. [Customizing Time, Woop Woop!](#2-customizing-time-woop-woop)
    - [Uploading Your Images](#upload-your-images)
    - [Change the Background](#change-the-background)
    - [Editing Your Pages](#editing-your-pages)
