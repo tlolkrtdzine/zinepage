@@ -47,7 +47,7 @@ First thing you need to do is click on the docs folder. You'll find yourself ins
 
 You'll be spending most of your time inside the `index.html` file. We have two things we need to do first, though:
 
-- **Upload Your Images:**  
+#### **Upload Your Images:**  
     Click on the `images` folder, then on `Add files`. 
 ![Image Adding](https://github.com/user-attachments/assets/f23f1f2f-2dd5-476e-8f1b-a7d331dd0831)
 Select `Upload files`, and you'll be taken to the page below. Drag and drop/download all the image files you'll be using.
@@ -58,7 +58,7 @@ Select `Upload files`, and you'll be taken to the page below. Drag and drop/down
 
 When you finished uploading all your photos, put any lil blurb in your commit title and press the button. Do NOT change anything else.
 
-- **Change the Background:**  
+#### **Change the Background:**  
     Click on the `assets` folder, then on `css` folder, and finally, click on `main.css` file.
   
 ![Background Guide ](https://github.com/user-attachments/assets/1d0735e9-265d-4c79-87e7-c2ed4cb94647)
@@ -84,7 +84,7 @@ Press the `Commit Changes` button again. Feel free to add a lil blurb in the com
 
 And now for the GOOD part:
 
-- **Editing your Pages:**  
+#### **Editing your Pages:**  
     Go back to the `docs` folder and click on `index.html`. All the code for all the pages is here. Click on the pencil in the top right to edit the code.
   
   ![Pencil for the Main Page](https://github.com/user-attachments/assets/3d7483b3-b010-49b2-834f-e69b7275f55a)
